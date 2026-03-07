@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DeployWise — Next.js Template
 
-## Getting Started
+A production-ready Next.js starter, pre-configured for one-click deployment to your VPS with [DeployWise](https://deploywise.dev).
 
-First, run the development server:
+## What's Included
+
+- Next.js 15 with App Router and TypeScript
+- Tailwind CSS ready
+- ESLint pre-configured
+- Optimized for PM2 + Nginx deployment
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy with DeployWise
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push this repo to GitHub
+2. Open [deploywise.dev/dashboard](https://deploywise.dev/dashboard)
+3. Add your VPS → Create a project → Select this repo
+4. Click **Deploy**
+
+DeployWise automatically runs `npm run build`, starts with PM2, configures Nginx, and issues a free SSL certificate. Live in under 60 seconds.
+
+## Project Structure
+
+```
+├── app/
+│   ├── layout.tsx    # Root layout
+│   ├── page.tsx      # Home page
+│   └── globals.css   # Global styles
+├── public/           # Static assets
+└── next.config.ts    # Next.js configuration
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Deploy Next.js to VPS Guide](https://deploywise.dev/guides/deploy-nextjs-to-vps)
+- [DeployWise Docs](https://deploywise.dev/docs)
+- [Next.js Documentation](https://nextjs.org/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed with [DeployWise](https://deploywise.dev) — free, open source.
