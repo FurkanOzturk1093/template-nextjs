@@ -33,7 +33,7 @@ export default function Home() {
           display: 'inline-block', boxShadow: '0 0 8px #10b981',
           animation: 'pulse 2s infinite',
         }} />
-        Live on DeployWise
+        Live on DeployWise || {process.env.NEXT_PUBLIC_TEST}
       </div>
 
       {/* Framework badge */}
